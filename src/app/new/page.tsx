@@ -1,0 +1,520 @@
+'use client';
+import styled from "styled-components";
+import Mission1 from '../../../public/images/Mission_1.png';
+import Mission2 from '../../../public/images/Mission_2.png';
+import Mission3 from '../../../public/images/Mission_3.png';
+// import SocialProof from '../../assets/images/social-proof.png';
+// import Redbite from '../../assets/images/partners/redbite-logo.png';
+// import Camtech from '../../assets/images/partners/camtech.png';
+// import Near from '../../assets/images/partners/near.png';
+// import Itemit from '../../assets/images/partners/itemit.png';
+
+// import Member1 from '../../assets/images/team/Image.png';
+// import Member2 from '../../assets/images/team/Image-1.png';
+// import Member3 from '../../assets/images/team/Image-2.png';
+// import Member4 from '../../assets/images/team/Image-3.png';
+// import Member5 from '../../assets/images/team/Image-4.png';
+// import Member6 from '../../assets/images/team/Image-5.png';
+// import Member7 from '../../assets/images/team/Image-6.png';
+// import Member8 from '../../assets/images/team/Image-7.png';
+
+import Image from 'next/image'
+
+// import EnquiryLogo from '../../assets/images/enquiry-logo.png';
+
+const FillPage = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  color: white;
+`;
+
+const GradientText = styled.span`
+  background: linear-gradient(90deg, #35FFEE 0%, #1E76C9 30%, #D400A5 70%, #F79E30 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2em; /* Adjust the font size based on your design */
+  font-weight: bold; /* Optionally make it bold */
+  font-size: 192px;
+  letter-spacing: -3px;
+`;
+
+const Spacer = styled.div`
+  width: 100%;
+  min-height: 96px;
+`;
+const Section = styled.div`
+  width: 100%;
+  min-height: 840px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const DullText = styled.span`
+  color: #6E6E73;
+`;
+
+const DullTextV2 = styled.span`
+  color: #D8D8D8;
+`;
+
+const HeroSection2 = () => {
+  return (
+    <Section className="gap-4">
+      {/* <GradientText>umin.ai</GradientText> */}
+      <span className="font-semibold text-[76px] max-w-[1024px] leading-[90px]">Unified machines, items and arificial intelligence.</span>
+      <DullText className="font-normal text-[28px] max-w-[800px] leading-[32px] tracking-[0.2px]">The Web3 item identification and intelligence standards unifying physical objects, machines, humans and robots.</DullText>
+    </Section>
+  )
+}
+
+const AutoHeightSection = styled.div`
+  width: 100%;
+  height: auto;
+  padding: 162.5px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+`;
+
+const MissionGrid = styled.div`
+  margin-top: 97px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+  // align-items: center;
+  justify-content: center;
+`;
+
+const MissionChildGrid = styled.div`
+  display: flex;
+  width: 100%;
+  max-width: 624px;
+  min-height: 400px;
+  border: 1px solid #222222;
+  box-sizing: border-box;
+  padding: 30.12px 49px 82.66px 49px;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const Img = styled.img`
+`;
+
+const MissionBaseGrid = styled.div`
+  position: relative;
+  display: flex;
+  max-width: 1280px;
+  min-height: 400px;
+  border: 1px solid #222222;
+  width: 100%;
+  align-items: center;
+  padding: 0px 49px;
+  overflow: hidden;
+`;
+const MissionSection = () => {
+  return (
+    <AutoHeightSection>
+      <div className="flex flex-col gap-4 w-full items-center">
+        <span className="font-semibold text-[128px] max-w-[1024px] leading-[128px]">The Mission</span>
+        <DullText className="font-normal text-[28px] max-w-[800px] leading-[32px] tracking-[0.2px]">
+          Our foundation harnesses blockchain technology to enable trustless, permissionless, decentralised & distributed solutions across diverse global industries.
+        </DullText>
+      </div>
+
+      <MissionGrid>
+        <MissionChildGrid>
+          <Image src={Mission1} alt="mission-1" />
+          <div className="flex flex-col text-start gap-3">
+            <div className="max-w-[335px] h-[72px]">
+              <span className="text-[33.82px] font-semibold leading-[38.5px] tracking-[0.37px]">Decentralised Auto-ID Platform</span>
+            </div>
+            <DullTextV2 className="text-[16px] text-justify max-w-[500px] leading-[26px]">
+              Decentralise existing physical item identification systems using blockchain to democratise and increase accessibility of product and resource identification worldwide.
+            </DullTextV2>
+          </div>
+        </MissionChildGrid>
+        <MissionChildGrid>
+        <Image src={Mission2} alt="mission-2" />
+          <div className="flex flex-col text-start gap-3">
+            <div className="h-[72px]">
+              <span className="text-[33.82px] font-semibold leading-[38.5px] tracking-[0.37px]">Intelligence Marketplace</span>
+            </div>
+            <DullTextV2 className="text-[16px] text-justify max-w-[500px] leading-[26px]">
+              Create a revenue-generating marketplace where apps, AI, robots, and machines can acquire new authenticated knowledge and intelligence from v and manufacturers.
+            </DullTextV2>
+          </div>
+        </MissionChildGrid>
+      </MissionGrid>
+      <MissionBaseGrid className="mt-8">
+        <div className="flex flex-col text-start gap-3">
+          <div className="h-[72px]">
+            <span className="text-[33.82px] font-semibold leading-[38.5px] tracking-[0.37px]">Social Network of AI Entities</span>
+          </div>
+          <DullTextV2 className="text-[16px] max-w-[500px] leading-[26px]">
+            Ensure intelligent item, AI, robot and machinery cross-communications are immutable and secure, creating transparency and tamper-proof interactions that humans can trust.
+          </DullTextV2>
+        </div>
+        <div className="absolute w-full h-full flex justify-end items-end">
+        <Image src={Mission3} alt="mission-3" />
+        </div>
+      </MissionBaseGrid>
+    </AutoHeightSection>
+  )
+}
+
+const SocialProofSection = styled.div`
+  width: 100%;
+  min-height: 981px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  position: relative;
+  z-index: 9999;
+  background: #000000;
+  // padding: 228px 0px 0px 0px;
+  // justify-content: space-between;
+`;
+
+const GradientTextV2 = styled.span`
+  background: linear-gradient(90deg, #35FFEE 0%, #1E76C9 30%, #D400A5 70%, #F79E30 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+  font-weight: bold;
+`;
+
+const PartnersBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+  // align-self: end;
+`;
+
+const PartnersGrid = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+`;
+
+const PartnerImg = styled(Img)`
+`;
+
+// const SocialProofHero = () => {
+
+//   return (
+//     <SocialProofSection id="social-proof">
+//       <div className="absolute flex w-full justify-center items-center pt-[98px]">
+//         <Img className="z-[-1]" src={SocialProof} />
+//       </div>
+//       <div className="flex flex-col gap-[24px] items-center pt-[228px]">
+//         <span className="font-medium text-[36px] max-w-[1156px] leading-[44px] tracking-[-2%]">
+//           umin.ai <GradientTextV2>bridges the gap</GradientTextV2> between AI-based decision making and the reality of the physical world with a standardised, decentralised item identification system.
+//         </span>
+//         <DullText style={{ color: "#94969C" }} className="font-normal text-[20px]">- Prof Duncan McFarlane</DullText>
+//       </div>
+
+//       <PartnersBox className="pt-[297px]">
+//         <span style={{ color: "#CECFD2" }} className="font-normal text-[20px] leading-[30px]">Our Partners</span>
+//         <PartnersGrid>
+//           <PartnerImg src={Redbite} />
+//           <PartnerImg src={Camtech} />
+//           <PartnerImg src={Near} />
+//           <PartnerImg src={Itemit} />
+//         </PartnersGrid>
+//       </PartnersBox>
+//     </SocialProofSection>
+//   )
+// }
+
+const TeamSection = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999;
+  background: #000000;
+  align-items: center;
+  padding: 96px 0px;
+`;
+
+const GradientTextV3 = styled.span`
+  background: linear-gradient(90deg, #35FFEE 0%, #1E76C9 30%, #D400A5 70%, #F79E30 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 48px;
+  font-weight: bold;
+`;
+
+const TeamMemberGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 280px);
+  gap: 32px;
+  width: 100%;
+  // align-items: center;
+  justify-content: center;
+`;
+
+const MemberCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+const MemberInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  align-items: start;
+
+  #member-name {
+    font-size: 20px;
+    font-weight: semibold;
+    line-height: 30px;
+  }
+
+  #member-position {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 28px;
+    color: #CECFD2;
+  }
+
+  #member-info {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    color: #94969C;
+    text-align: start;
+  }
+`;
+
+// const OurTeamSection = () => {
+//   return (
+//     <TeamSection>
+//       <div className="flex flex-col gap-[12px]">
+//         <DullText style={{ color: "#94969C" }} className="font-normal text-[20px]">Our Team</DullText>
+//         <span className="font-semibold text-[48px] leading-[60px] tracking-[-2%]">Meet the makers behind <GradientTextV3>umin.ai</GradientTextV3></span>
+//       </div>
+//       <DullText style={{ color: "#94969C" }} className="font-normal text-[20px] max-w-[768px] pt-[24px]">
+//         Our team consists of the original architect of RFID, EPC Network and IoT standards. We are redefining Internet-of-Things to Intelligence-of-Things.
+//       </DullText>
+
+//       <TeamMemberGrid className="pt-[160px]">
+//         <MemberCard>
+//           <Img src={Member1} />
+//           <MemberInfo>
+//             <span id="member-name">Dr. Alex Wong</span>
+//             <span id="member-position">Co-Founder</span>
+//             <span id="member-info">CEO and Co-Founder of RedBite Solutions Ltd.</span>
+//           </MemberInfo>
+//         </MemberCard>
+
+//         <MemberCard>
+//           <Img src={Member2} />
+//           <MemberInfo>
+//             <span id="member-name">Prof. Duncan McFarlane</span>
+//             <span id="member-position">Chairman & Co-Founder</span>
+//             <span id="member-info">Director of RedBite. Professor of Industrial Information Engineering at University of Cambridge</span>
+//           </MemberInfo>
+//         </MemberCard>
+
+//         <MemberCard>
+//           <Img src={Member3} />
+//           <MemberInfo>
+//             <span id="member-name">Charlotte Ellarby</span>
+//             <span id="member-position">Co-Founder</span>
+//             <span id="member-info">Associate Director and Co-Founder of itemit at RedBite Solutions</span>
+//           </MemberInfo>
+//         </MemberCard>
+
+//         <MemberCard>
+//           <Img src={Member4} />
+//           <MemberInfo>
+//             <span id="member-name">Morgan Lee</span>
+//             <span id="member-position">Developer</span>
+//             <span id="member-info">Full-stack Web3 Developer at Redbite</span>
+//           </MemberInfo>
+//         </MemberCard>
+//       </TeamMemberGrid>
+
+//       {/* Second Row */}
+//       <TeamMemberGrid className="pt-[48px]">
+//         <MemberCard>
+//           <Img src={Member5} />
+//           <MemberInfo>
+//             <span id="member-name">Kevin Ashton</span>
+//             <span id="member-position">Advisorr</span>
+//             <span id="member-info">Coined IoT (TBD)</span>
+//           </MemberInfo>
+//         </MemberCard>
+
+//         <MemberCard>
+//           <Img src={Member6} />
+//           <MemberInfo>
+//             <span id="member-name">Meng Han</span>
+//             <span id="member-position">Investor</span>
+//             <span id="member-info">CEO of Camtech</span>
+//           </MemberInfo>
+//         </MemberCard>
+
+//         <MemberCard>
+//           <Img src={Member7} />
+//           <MemberInfo>
+//             <span id="member-name">Flex Yang</span>
+//             <span id="member-position">Finance</span>
+//             <span id="member-info">CEO of Hope / Babel Finance</span>
+//           </MemberInfo>
+//         </MemberCard>
+
+//         <MemberCard>
+//           <Img src={Member8} />
+//           <MemberInfo>
+//             <span id="member-name">Sanjay Srma</span>
+//             <span id="member-position">Advisor</span>
+//             <span id="member-info">MIT Professor (TBD)</span>
+//           </MemberInfo>
+//         </MemberCard>
+//       </TeamMemberGrid>
+
+//     </TeamSection>
+//   )
+// }
+
+const EnquirySection = styled.div`
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const GradientTextV4 = styled.span`
+  background: linear-gradient(90deg, #35FFEE 0%, #1E76C9 30%, #D400A5 70%, #F79E30 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+`;
+// const Enquiry = () => {
+//   return (
+//     <EnquirySection className="py-[96px] px-[112px]">
+//       <div className="flex flex-col items-start gap-8">
+//         <span className="font-semibold text-[48px] leading-[60px]">Have questions?</span>
+//         <span style={{ color: '#94969C' }} className="font-normal text-[20px] leading-[30px]">Reach out to us at <GradientTextV4>hello@umin.ai</GradientTextV4></span>
+//       </div>
+//       <div className="">
+//         <Img className="max-w-[398px]" src={EnquiryLogo} />
+//       </div>
+//     </EnquirySection>
+//   )
+// }
+
+const CallToActionSection = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 96px 0px 128px 0px;
+`;
+
+const EnterEmailWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+`;
+
+const StyledInputForEmail = styled.input`
+  // max-width: 345px;
+  width: 345px;
+  height: 48px;
+  background: transparent;
+  border: 1px solid #333741;
+  border-radius: 8px;
+  padding: 0px 14px;
+`;
+
+const StyledButtonGradient = styled.button`
+  background: linear-gradient(90deg, #00B5FC 0%, #CD48FC 47%, #F79E2F 100%);
+  border-radius: 8px;
+  min-width: 119px;
+  color: white;
+  font-weight: semibold;
+  font-size: 16px;
+  border: none;
+`;
+
+const CallToAction = () => {
+  return (
+    <CallToActionSection>
+      <div className="flex flex-col gap-[20px]">
+        <span className="font-semibold text-[36px] leading-[44px] tracking-[-%2]">Join the revolution - sign up now!</span>
+        <span style={{ color: "#94969C" }} className="font-normal text-[20px] leading-[30px]">Stay updated and be the first to know about our launch!</span>
+      </div>
+      <EnterEmailWrapper className="pt-[32px]">
+        <StyledInputForEmail placeholder="Enter your email"/>
+        <StyledButtonGradient>Subscribe</StyledButtonGradient>
+      </EnterEmailWrapper>
+    </CallToActionSection>
+  )
+}
+
+const FooterSection = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 80px;
+`;
+const Footer = () => {
+  return (
+    <FooterSection>
+      <span style={{ color: "#94969C" }} className="font-normal text-[16px] leading-[24px]">© 2024 umin.ai. All rights reserved.</span>
+    </FooterSection>
+  )
+}
+
+const Landing = () => {
+  return (
+    <FillPage>
+      <Spacer />
+      <Section id='section'>
+        <GradientText>umin.ai</GradientText>
+      </Section>
+
+      <HeroSection2 />
+
+      <MissionSection />
+
+      {/* <SocialProofHero /> */}
+
+      {/* <OurTeamSection /> */}
+
+      {/* <Enquiry /> */}
+
+      <CallToAction />
+      <Footer />
+    </FillPage>
+  );
+}
+
+
+
+export default Landing;
