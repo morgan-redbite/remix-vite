@@ -48,6 +48,10 @@ const GradientText = styled.span`
 const Spacer = styled.div`
   width: 100%;
   min-height: 96px;
+
+  @media (max-width: 768px) {
+    min-height: 0px;
+  }
 `;
 const Section = styled.div`
   width: 100%;
@@ -632,7 +636,7 @@ const HeaderSection = styled.div`
   justify-content: center;
 
   @media (max-width: 768px) {
-    min-height: 840px;
+    min-height: 680px;
   }
 `;
 
