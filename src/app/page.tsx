@@ -39,6 +39,10 @@ const GradientText = styled.span`
   font-weight: bold; /* Optionally make it bold */
   font-size: 192px;
   letter-spacing: -3px;
+
+  @media (max-width: 768px) {
+    font-size: 86px;
+  };
 `;
 
 const Spacer = styled.div`
@@ -53,6 +57,19 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    min-height: 120px;
+    span {
+      font-size: 26px;
+      line-height: 44px;
+    }
+    #hero-section-description {
+      font-size: 18px;
+      line-height: 40px;
+      max-width: 90%;
+    }
+  }
 `;
 
 const DullText = styled.span`
@@ -67,8 +84,8 @@ const HeroSection2 = () => {
   return (
     <Section className="gap-4">
       {/* <GradientText>umin.ai</GradientText> */}
-      <span className="font-semibold text-[76px] max-w-[1024px] leading-[90px]">Unified machines, items and arificial intelligence.</span>
-      <DullText className="font-normal text-[28px] max-w-[800px] leading-[32px] tracking-[0.2px]">The Web3 item identification and intelligence standards unifying physical objects, machines, humans and robots.</DullText>
+      <span className="font-semibold text-center text-[76px] max-w-[1024px] leading-[90px]">Unified machines, items and arificial intelligence.</span>
+      <DullText id='hero-section-description' className="font-normal text-center text-[28px] max-w-[800px] leading-[32px] tracking-[0.2px]">The Web3 item identification and intelligence standards unifying physical objects, machines, humans and robots.</DullText>
     </Section>
   )
 }
@@ -81,6 +98,19 @@ const AutoHeightSection = styled.div`
   flex-direction: column;
   align-items: center;
   // justify-content: center;
+  
+  @media (max-width: 768px) {
+    span {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    #mission-section-description {
+      font-size: 18px;
+      line-height: 36px;
+      max-width: 90%;
+    }
+  }
 `;
 
 const MissionGrid = styled.div`
@@ -91,6 +121,10 @@ const MissionGrid = styled.div`
   width: 100%;
   // align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const MissionChildGrid = styled.div`
@@ -103,6 +137,24 @@ const MissionChildGrid = styled.div`
   padding: 30.12px 49px 82.66px 49px;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    padding: 30.12px 24px 30.12px 24px;
+    #title {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    #description {
+      font-size: 16px;
+      line-height: 28px;
+      text-align: start;
+    }
+
+    #intelligent-marketplace {
+      margin-top: 24px;
+    }
+  }
 `;
 
 const Img = styled.img`
@@ -118,13 +170,32 @@ const MissionBaseGrid = styled.div`
   align-items: center;
   padding: 0px 49px;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 0px 24px;
+    #title {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    #description {
+      font-size: 16px;
+      line-height: 28px;
+      text-align: start;
+    }
+
+    #absolute-image {
+      z-index: -1;
+      opacity: 0.5;
+    }
+  }
 `;
 const MissionSection = () => {
   return (
     <AutoHeightSection>
       <div className="flex flex-col gap-4 w-full items-center">
-        <span className="font-semibold text-[128px] max-w-[1024px] leading-[128px]">The Mission</span>
-        <DullText className="font-normal text-[28px] max-w-[800px] leading-[32px] tracking-[0.2px]">
+        <span className="font-semibold text-center text-[128px] max-w-[1024px] leading-[128px]">The Mission</span>
+        <DullText id='mission-section-description' className="font-normal text-center text-[28px] max-w-[800px] leading-[32px] tracking-[0.2px]">
           Our foundation harnesses blockchain technology to enable trustless, permissionless, decentralised & distributed solutions across diverse global industries.
         </DullText>
       </div>
@@ -134,20 +205,20 @@ const MissionSection = () => {
           <Image src={Mission1} alt="mission-1" />
           <div className="flex flex-col text-start gap-3">
             <div className="max-w-[335px] h-[72px]">
-              <span className="text-[33.82px] font-semibold leading-[38.5px] tracking-[0.37px]">Decentralised Auto-ID Platform</span>
+              <span id='title' className="text-[33.82px] font-semibold leading-[38.5px] tracking-[0.37px]">Decentralised Auto-ID Platform</span>
             </div>
-            <DullTextV2 className="text-[16px] text-justify max-w-[500px] leading-[26px]">
+            <DullTextV2 id='description' className="text-[16px] text-justify max-w-[500px] leading-[26px]">
               Decentralise existing physical item identification systems using blockchain to democratise and increase accessibility of product and resource identification worldwide.
             </DullTextV2>
           </div>
         </MissionChildGrid>
         <MissionChildGrid>
         <Image src={Mission2} alt="mission-2" />
-          <div className="flex flex-col text-start gap-3">
+          <div id='intelligent-marketplace' className="flex flex-col text-start gap-3">
             <div className="h-[72px]">
-              <span className="text-[33.82px] font-semibold leading-[38.5px] tracking-[0.37px]">Intelligence Marketplace</span>
+              <span id='title' className="text-[33.82px] font-semibold leading-[38.5px] tracking-[0.37px]">Intelligence Marketplace</span>
             </div>
-            <DullTextV2 className="text-[16px] text-justify max-w-[500px] leading-[26px]">
+            <DullTextV2 id='description' className="text-[16px] text-justify max-w-[500px] leading-[26px]">
               Create a revenue-generating marketplace where apps, AI, robots, and machines can acquire new authenticated knowledge and intelligence from v and manufacturers.
             </DullTextV2>
           </div>
@@ -156,14 +227,14 @@ const MissionSection = () => {
       <MissionBaseGrid className="mt-8">
         <div className="flex flex-col text-start gap-3">
           <div className="h-[72px]">
-            <span className="text-[33.82px] font-semibold leading-[38.5px] tracking-[0.37px]">Social Network of AI Entities</span>
+            <span id='title' className="text-[33.82px] font-semibold leading-[38.5px] tracking-[0.37px]">Social Network of AI Entities</span>
           </div>
-          <DullTextV2 className="text-[16px] max-w-[500px] leading-[26px]">
+          <DullTextV2 id='description' className="text-[16px] max-w-[500px] leading-[26px]">
             Ensure intelligent item, AI, robot and machinery cross-communications are immutable and secure, creating transparency and tamper-proof interactions that humans can trust.
           </DullTextV2>
         </div>
-        <div className="absolute w-full h-full flex justify-end items-end">
-        <Image src={Mission3} alt="mission-3" />
+        <div id='absolute-image' className="absolute w-full h-full flex justify-end items-end">
+          <Image src={Mission3} alt="mission-3" />
         </div>
       </MissionBaseGrid>
     </AutoHeightSection>
@@ -183,6 +254,36 @@ const SocialProofSection = styled.div`
   background: #000000;
   // padding: 228px 0px 0px 0px;
   // justify-content: space-between;
+
+  @media (max-width: 768px) {
+    padding: 0px 24px;
+    min-height: unset;
+
+    #about-wrapper {
+      padding-top: 108px;
+
+      #about {
+        font-size: 20px;
+      }
+
+      #about-gradient {
+        font-size: 19px;
+      }
+    }
+
+
+    #absolute-image {
+      position: relative;
+      width: unset;
+      z-index: -1;
+      padding-top: 0px;
+      margin-top: -60px;
+      background: #000000;
+      img {
+        // max-width: 500px;
+      }
+    }
+  }
 `;
 
 const GradientTextV2 = styled.span`
@@ -199,6 +300,14 @@ const PartnersBox = styled.div`
   width: 100%;
   gap: 32px;
   // align-self: end;
+
+  @media (max-width: 768px) {
+    padding-top: 108px;
+    padding-bottom: 48px;
+    span {
+      font-size: 28px;
+    }
+  }
 `;
 
 const PartnersGrid = styled.div`
@@ -208,6 +317,11 @@ const PartnersGrid = styled.div`
   width: 100%;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 
@@ -215,18 +329,19 @@ const SocialProofHero = () => {
 
   return (
     <SocialProofSection id="social-proof">
-      <div className="absolute flex w-full justify-center items-center pt-[98px]">
-        <Image className="z-[-1]" src={SocialProof} alt="social" />
-      </div>
-      <div className="flex flex-col gap-[24px] items-center pt-[228px]">
-        <span className="font-medium text-[36px] max-w-[1156px] leading-[44px] tracking-[-2%]">
-          umin.ai <GradientTextV2>bridges the gap</GradientTextV2> between AI-based decision making and the reality of the physical world with a standardised, decentralised item identification system.
+      <div id='about-wrapper' className="flex flex-col gap-[24px] items-center pt-[228px]">
+        <span id='about' className="font-medium text-center text-[36px] max-w-[1156px] leading-[44px] tracking-[-2%]">
+          umin.ai <GradientTextV2 id='about-gradient'>bridges the gap</GradientTextV2> between AI-based decision making and the reality of the physical world with a standardised, decentralised item identification system.
         </span>
         <DullText style={{ color: "#94969C" }} className="font-normal text-[20px]">- Prof Duncan McFarlane</DullText>
       </div>
 
+      <div id='absolute-image' className="absolute flex w-full justify-center items-center pt-[98px]">
+        <Image className="z-[-1]" src={SocialProof} alt="social" />
+      </div>
+
       <PartnersBox className="pt-[297px]">
-        <span style={{ color: "#CECFD2" }} className="font-normal text-[20px] leading-[30px]">Our Partners</span>
+        <span style={{ color: "#CECFD2" }} className="font-normal text-center text-[20px] leading-[30px]">Our Partners</span>
         <PartnersGrid>
           <Image src={Redbite} alt="redbite" />
           <Image src={Camtech} alt="camtech" />
@@ -400,6 +515,25 @@ const EnquirySection = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 96px 24px;
+
+    #call-to-action-wrapper {
+      gap: 8px;
+    }
+    #call-to-action-text {
+      font-size: 26px;
+    }
+
+    #image-wrapper {
+      padding-top: 48px;
+      #image {
+        max-width: 280px;
+      }
+    }
+  }
 `;
 
 const GradientTextV4 = styled.span`
@@ -411,13 +545,16 @@ const GradientTextV4 = styled.span`
 `;
 const Enquiry = () => {
   return (
-    <EnquirySection className="py-[96px] px-[112px]">
-      <div className="flex flex-col items-start gap-8">
-        <span className="font-semibold text-[48px] leading-[60px]">Have questions?</span>
-        <span style={{ color: '#94969C' }} className="font-normal text-[20px] leading-[30px]">Reach out to us at <GradientTextV4>hello@umin.ai</GradientTextV4></span>
+    <EnquirySection className="py-[96px] px-[200px]">
+      <div id='call-to-action-wrapper' className="flex flex-col items-start gap-8">
+        <span id='call-to-action-text' className="font-semibold text-[48px] leading-[60px]">Have questions?</span>
+        <span style={{ color: '#94969C' }} className="font-normal text-[20px] leading-[30px]">
+          Reach out to us at {' '}
+          <GradientTextV4 onClick={() => window.location.href = "mailto:hello@umin.ai"}>hello@umin.ai</GradientTextV4>
+        </span>
       </div>
-      <div className="">
-        <Image className="max-w-[398px]" src={EnquiryLogo} alt="enquiry-uminai" />
+      <div id="image-wrapper">
+        <Image id='image' className="max-w-[398px]" src={EnquiryLogo} alt="enquiry-uminai" />
       </div>
     </EnquirySection>
   )
@@ -430,6 +567,14 @@ const CallToActionSection = styled.div`
   align-items: center;
   justify-content: center;
   padding: 96px 0px 128px 0px;
+
+  @media (max-width: 768px) {
+    padding: 20px 24px 40px 24px;
+    #main {
+      font-size: 20px;
+      line-height: 44px;
+    }
+  }
 `;
 
 const EnterEmailWrapper = styled.div`
@@ -446,6 +591,10 @@ const StyledInputForEmail = styled.input`
   border: 1px solid #333741;
   border-radius: 8px;
   padding: 0px 14px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const StyledButtonGradient = styled.button`
@@ -462,7 +611,7 @@ const CallToAction = () => {
   return (
     <CallToActionSection>
       <div className="flex flex-col gap-[20px]">
-        <span className="font-semibold text-[36px] leading-[44px] tracking-[-%2]">Join the revolution - sign up now!</span>
+        <span id='main' className="font-semibold text-[36px] leading-[44px] tracking-[-%2]">Join the revolution - sign up now!</span>
         <span style={{ color: "#94969C" }} className="font-normal text-[20px] leading-[30px]">Stay updated and be the first to know about our launch!</span>
       </div>
       <EnterEmailWrapper className="pt-[32px]">
@@ -473,6 +622,20 @@ const CallToAction = () => {
   )
 }
 
+const HeaderSection = styled.div`
+  width: 100%;
+  min-height: 840px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    min-height: 840px;
+  }
+`;
+
 const FooterSection = styled.div`
   width: 100%;
   display: flex;
@@ -480,6 +643,10 @@ const FooterSection = styled.div`
   align-items: center;
   justify-content: center;
   padding: 48px 80px;
+
+  @media (max-width: 768px) {
+    padding: 24px 24px;
+  }
 `;
 const Footer = () => {
   return (
@@ -493,9 +660,9 @@ export default function Home() {
   return (
     <FillPage>
       <Spacer />
-      <Section id='section'>
+      <HeaderSection id='section-header'>
         <GradientText>umin.ai</GradientText>
-      </Section>
+      </HeaderSection>
 
       <HeroSection2 />
 
