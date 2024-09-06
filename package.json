@@ -42,6 +42,7 @@
     "react": "18.3.0-canary-2f8f77602-20240229",
     "react-dom": "18.3.0-canary-2f8f77602-20240229",
     "remix-typedjson": "^0.4.1",
+    "remix-vite-template": "file:",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
