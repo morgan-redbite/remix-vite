@@ -1,6 +1,5 @@
 'use client';
 import ReactPlayer from "react-player";
-import Video from 'next-video';
 import styled from "styled-components";
 
 const PreviewPage = styled.div`
